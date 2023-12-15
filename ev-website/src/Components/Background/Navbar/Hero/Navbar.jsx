@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "./Navbar.css";
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState();
 
   return (
     <div className="nav">
       <div className="nav-logo">Ev-olution</div>
-      <ul className="nav-menu" style={{ display: open ? "flex" : "none" }}>
+      <div className="nav-menu2">
+      <ul className="nav-menu" style={{ opacity: open ? "1" : "0" }}>
         <li>Home</li>
         <li>Explore</li>
         <li>About</li>
@@ -25,6 +26,7 @@ const Navbar = () => {
           onClick={() => setOpen(false)}
         ></i>
       )}
+      </div>
     </div>
   );
 };
